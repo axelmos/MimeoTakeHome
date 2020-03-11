@@ -57,12 +57,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HKa-0P-fLk">
-                                <rect key="frame" x="10" y="10" width="394" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bJ-D0-t3Z">
+                                <rect key="frame" x="10" y="10" width="394" height="658"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HKa-0P-fLk">
+                                        <rect key="frame" x="0.0" y="179" width="394" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="fzh-kg-Rn9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBE-3f-1ok">
+                                        <rect key="frame" x="345" y="10" width="39" height="30"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="onBackWithSender:" destination="Urq-kw-2Ba" eventType="touchUpInside" id="P7w-6O-bpp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="fzh-kg-Rn9"/>
+                                    <constraint firstAttribute="trailing" secondItem="gBE-3f-1ok" secondAttribute="trailing" constant="10" id="6gl-65-z6a"/>
+                                    <constraint firstItem="gBE-3f-1ok" firstAttribute="top" secondItem="8bJ-D0-t3Z" secondAttribute="top" constant="10" id="Fpw-za-UaB"/>
+                                    <constraint firstItem="HKa-0P-fLk" firstAttribute="centerY" secondItem="8bJ-D0-t3Z" secondAttribute="centerY" id="eDp-yN-oSD"/>
+                                    <constraint firstItem="HKa-0P-fLk" firstAttribute="leading" secondItem="8bJ-D0-t3Z" secondAttribute="leading" id="rEW-Ay-PRa"/>
+                                    <constraint firstAttribute="trailing" secondItem="HKa-0P-fLk" secondAttribute="trailing" id="t8g-Gw-FfL"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UDe-QL-yTg">
                                 <rect key="frame" x="20" y="678" width="374" height="80"/>
                                 <subviews>
@@ -120,14 +140,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="8bJ-D0-t3Z" firstAttribute="leading" secondItem="wbL-3C-WFE" secondAttribute="leading" constant="10" id="67u-oB-fhp"/>
                             <constraint firstItem="8dV-KD-FK9" firstAttribute="leading" secondItem="wbL-3C-WFE" secondAttribute="leading" constant="20" id="Er5-OL-qut"/>
                             <constraint firstItem="wbL-3C-WFE" firstAttribute="trailing" secondItem="8dV-KD-FK9" secondAttribute="trailing" constant="20" id="FnB-yl-kJ2"/>
-                            <constraint firstItem="HKa-0P-fLk" firstAttribute="top" secondItem="wbL-3C-WFE" secondAttribute="top" constant="10" id="TR7-PZ-7bx"/>
                             <constraint firstItem="8dV-KD-FK9" firstAttribute="top" secondItem="UDe-QL-yTg" secondAttribute="bottom" constant="10" id="Z4m-Ej-gze"/>
                             <constraint firstItem="wbL-3C-WFE" firstAttribute="trailing" secondItem="UDe-QL-yTg" secondAttribute="trailing" constant="20" id="ZKA-5e-geu"/>
                             <constraint firstItem="8dV-KD-FK9" firstAttribute="bottom" secondItem="wbL-3C-WFE" secondAttribute="bottom" constant="10" id="aTF-GP-fQn"/>
-                            <constraint firstItem="HKa-0P-fLk" firstAttribute="leading" secondItem="wbL-3C-WFE" secondAttribute="leading" constant="10" id="eL1-34-iIB"/>
-                            <constraint firstItem="wbL-3C-WFE" firstAttribute="trailing" secondItem="HKa-0P-fLk" secondAttribute="trailing" constant="10" id="iIC-Kp-lCe"/>
+                            <constraint firstItem="UDe-QL-yTg" firstAttribute="top" secondItem="8bJ-D0-t3Z" secondAttribute="bottom" constant="10" id="cNf-eF-UDb"/>
+                            <constraint firstItem="8bJ-D0-t3Z" firstAttribute="top" secondItem="wbL-3C-WFE" secondAttribute="top" constant="10" id="evc-Ay-8EE"/>
+                            <constraint firstItem="wbL-3C-WFE" firstAttribute="trailing" secondItem="8bJ-D0-t3Z" secondAttribute="trailing" constant="10" id="mMW-RD-WSk"/>
                             <constraint firstItem="UDe-QL-yTg" firstAttribute="leading" secondItem="wbL-3C-WFE" secondAttribute="leading" constant="20" id="vZt-FU-Agd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wbL-3C-WFE"/>

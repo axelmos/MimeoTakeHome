@@ -11,6 +11,9 @@
 		2F8E823224185585009938AB /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F8E823024185585009938AB /* ImageCollectionViewCell.xib */; };
 		2F8E823524185CAC009938AB /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8E823424185CAC009938AB /* UIImage.swift */; };
 		2F8E823924186752009938AB /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8E823824186752009938AB /* EditViewController.swift */; };
+		2F8E823E24188E50009938AB /* EditImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8E823D24188E50009938AB /* EditImage.swift */; };
+		2F8E8241241898E6009938AB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8E8240241898E6009938AB /* Utils.swift */; };
+		2F8E82432419013F009938AB /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8E82422419013F009938AB /* UserDefaults.swift */; };
 		D90FCBA02412E17700A04738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FCB9F2412E17700A04738 /* AppDelegate.swift */; };
 		D90FCBA22412E17700A04738 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FCBA12412E17700A04738 /* SceneDelegate.swift */; };
 		D90FCBA42412E17700A04738 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FCBA32412E17700A04738 /* ViewController.swift */; };
@@ -44,6 +47,9 @@
 		2F8E823024185585009938AB /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		2F8E823424185CAC009938AB /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		2F8E823824186752009938AB /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		2F8E823D24188E50009938AB /* EditImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImage.swift; sourceTree = "<group>"; };
+		2F8E8240241898E6009938AB /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		2F8E82422419013F009938AB /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		D90FCB9C2412E17700A04738 /* MimeoTakeHome-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MimeoTakeHome-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90FCB9F2412E17700A04738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D90FCBA12412E17700A04738 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,8 +105,25 @@
 			isa = PBXGroup;
 			children = (
 				2F8E823424185CAC009938AB /* UIImage.swift */,
+				2F8E82422419013F009938AB /* UserDefaults.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2F8E823C24188E36009938AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F8E823D24188E50009938AB /* EditImage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F8E823F241898CB009938AB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2F8E8240241898E6009938AB /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		D90FCB932412E17700A04738 = {
@@ -126,6 +149,8 @@
 		D90FCB9E2412E17700A04738 /* MimeoTakeHome-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2F8E823F241898CB009938AB /* Utils */,
+				2F8E823C24188E36009938AB /* Model */,
 				2F8E823324185C99009938AB /* Extensions */,
 				2F8E822E24185566009938AB /* Cell */,
 				D90FCB9F2412E17700A04738 /* AppDelegate.swift */,
@@ -295,9 +320,12 @@
 				D90FCBA42412E17700A04738 /* ViewController.swift in Sources */,
 				2F8E823524185CAC009938AB /* UIImage.swift in Sources */,
 				2F8E823924186752009938AB /* EditViewController.swift in Sources */,
+				2F8E823E24188E50009938AB /* EditImage.swift in Sources */,
 				D90FCBA02412E17700A04738 /* AppDelegate.swift in Sources */,
+				2F8E82432419013F009938AB /* UserDefaults.swift in Sources */,
 				2F8E823124185585009938AB /* ImageCollectionViewCell.swift in Sources */,
 				D90FCBA22412E17700A04738 /* SceneDelegate.swift in Sources */,
+				2F8E8241241898E6009938AB /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

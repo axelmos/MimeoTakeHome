@@ -11,8 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
-    var arrImages = [String]()
+    var arrImages = [EditImage]()
     let cellWidth = (UIScreen.main.bounds.width / 3) - 4
+    var firstLaunch = true
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -24,7 +25,8 @@ class ViewController: UIViewController {
             
             for item in items {
                 if item.hasPrefix("nicole-king") {
-                    arrImages.append("\(path)/\(item)")
+                    let img = EditImage(fullPath: "\(path)/\(item)", filename: item, position: 0, uuid: "0")
+                    arrImages.append(img)
                     print(item)
                 }
             }
@@ -33,19 +35,54 @@ class ViewController: UIViewController {
         }
         
         collectionView.register(UINib.init(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ImageCollectionViewCell")
+
 	}
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let editedImages = Utils.getEditedImages()
+        var i:Int!
+        var needUpdate = false
+        
+        for editImg in editedImages {
+            i = 0
+            for img in arrImages {
+                if img.filename == editImg.filename {
+                    arrImages[i].position = editImg.position // Replace image for the edited image that was stored in userdefaults.
+                    needUpdate = true
+                }
+                i += 1
+            }
+            
+        }
+        
+        if firstLaunch {
+            firstLaunch = false
+            return
+        }
+        
+        if needUpdate {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    // MARK: Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "showEditView"{
-            let detailVC = segue.destination as! EditViewController
+            let editVC = segue.destination as! EditViewController
             let indexPath = sender as! IndexPath
-            detailVC.imagePath = arrImages[indexPath.row]
+            editVC.editImage = arrImages[indexPath.row]
+            editVC.modalPresentationStyle = .fullScreen
         }
     }
 }
 
-// MARK: UICollectionViewDelegate
+// MARK: UICollectionView Delegate
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -57,9 +94,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as? ImageCollectionViewCell {
             
-            let image = UIImage(named: arrImages[indexPath.row])
+            let image = UIImage(named: arrImages[indexPath.row].fullPath)
             let resizedImage = image?.resizeImage(newSize: CGSize(width: cellWidth, height: cellWidth))
             cell.imageView.image = resizedImage
+            cell.imageView.transform = .identity
+            // Rotate image if it was edited
+            cell.imageView.transform = cell.imageView.transform.rotated(by: Utils.getAngleValueFor(position: arrImages[indexPath.row].position ?? 0))
+            print (Utils.getAngleValueFor(position: arrImages[indexPath.row].position ?? 0))
             
             return cell
         } else {
@@ -73,6 +114,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         }
     }
 }
+
+// MARK: UICollectionView Flow Layout
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
