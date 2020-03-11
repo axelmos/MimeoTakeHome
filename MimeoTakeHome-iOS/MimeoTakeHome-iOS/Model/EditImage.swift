@@ -14,5 +14,7 @@ struct EditImage: Codable {
     var filename: String!
     var position: Int? // the rotation position (from 0 to 3)
     var uuid: String?
+    var width: String?
+    var height: String?
     
 }

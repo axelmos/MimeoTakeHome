@@ -30,6 +30,9 @@ class EditViewController: UIViewController {
         oldPosition = position
         self.imageView.transform = self.imageView.transform.rotated(by: Utils.getAngleValueFor(position: position))
         
+        // Save image dimensions for sharing
+        editImage.width = "\(image?.size.width ?? 0)"
+        editImage.height = "\(image?.size.height ?? 0)"
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -49,6 +52,8 @@ class EditViewController: UIViewController {
         }
         position = 0
         editImage.position = 0
+        // Reset all stored rotated images
+        UserDefaults.standard.encode(for:[EditImage](), using: "EditedImages")
     }
     
     // MARK: - IBActions
@@ -99,6 +104,21 @@ class EditViewController: UIViewController {
     
     @IBAction func onShare(sender: UIButton) {
         
+        APIClient.shared.getUUID { (model) in
+            
+            print(model?.uuid ?? "n/a")
+            self.editImage.uuid = model?.uuid ?? ""
+            
+            APIClient.shared.postRequest(image: self.editImage) { (response) in
+                print (response ?? "No response!")
+                
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Server response:", message: "\(String(describing: response))", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(alert, animated: true)
+                }
+                
+            }
+        }
     }
-    
 }
