@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F8E823124185585009938AB /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8E822F24185585009938AB /* ImageCollectionViewCell.swift */; };
+		2F8E823224185585009938AB /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F8E823024185585009938AB /* ImageCollectionViewCell.xib */; };
+		2F8E823524185CAC009938AB /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8E823424185CAC009938AB /* UIImage.swift */; };
+		D90FCBA02412E17700A04738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FCB9F2412E17700A04738 /* AppDelegate.swift */; };
+		D90FCBA22412E17700A04738 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FCBA12412E17700A04738 /* SceneDelegate.swift */; };
+		D90FCBA42412E17700A04738 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FCBA32412E17700A04738 /* ViewController.swift */; };
+		D90FCBA72412E17700A04738 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90FCBA52412E17700A04738 /* Main.storyboard */; };
+		D90FCBA92412E17900A04738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D90FCBA82412E17900A04738 /* Assets.xcassets */; };
+		D90FCBAC2412E17900A04738 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90FCBAA2412E17900A04738 /* LaunchScreen.storyboard */; };
+		D90FCBB72412E17900A04738 /* MimeoTakeHome_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FCBB62412E17900A04738 /* MimeoTakeHome_iOSTests.swift */; };
+		D90FCBC22412E17900A04738 /* MimeoTakeHome_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FCBC12412E17900A04738 /* MimeoTakeHome_iOSUITests.swift */; };
+		D90FCC0C2412EBB500A04738 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = D90FCC0B2412EBB500A04738 /* Images */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D90FCBB32412E17900A04738 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90FCB942412E17700A04738 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D90FCB9B2412E17700A04738;
+			remoteInfo = "MimeoTakeHome-iOS";
+		};
+		D90FCBBE2412E17900A04738 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90FCB942412E17700A04738 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D90FCB9B2412E17700A04738;
+			remoteInfo = "MimeoTakeHome-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F8E822F24185585009938AB /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F8E823024185585009938AB /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		2F8E823424185CAC009938AB /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		D90FCB9C2412E17700A04738 /* MimeoTakeHome-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MimeoTakeHome-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90FCB9F2412E17700A04738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D90FCBA12412E17700A04738 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D90FCBA32412E17700A04738 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D90FCBA62412E17700A04738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D90FCBA82412E17900A04738 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D90FCBAB2412E17900A04738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D90FCBAD2412E17900A04738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90FCBB22412E17900A04738 /* MimeoTakeHome-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MimeoTakeHome-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90FCBB62412E17900A04738 /* MimeoTakeHome_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeoTakeHome_iOSTests.swift; sourceTree = "<group>"; };
+		D90FCBB82412E17900A04738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90FCBBD2412E17900A04738 /* MimeoTakeHome-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MimeoTakeHome-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90FCBC12412E17900A04738 /* MimeoTakeHome_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeoTakeHome_iOSUITests.swift; sourceTree = "<group>"; };
+		D90FCBC32412E17900A04738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90FCC0B2412EBB500A04738 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = ../../Images; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D90FCB992412E17700A04738 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90FCBAF2412E17900A04738 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90FCBBA2412E17900A04738 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F8E822E24185566009938AB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2F8E822F24185585009938AB /* ImageCollectionViewCell.swift */,
+				2F8E823024185585009938AB /* ImageCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2F8E823324185C99009938AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2F8E823424185CAC009938AB /* UIImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D90FCB932412E17700A04738 = {
+			isa = PBXGroup;
+			children = (
+				D90FCB9E2412E17700A04738 /* MimeoTakeHome-iOS */,
+				D90FCBB52412E17900A04738 /* MimeoTakeHome-iOSTests */,
+				D90FCBC02412E17900A04738 /* MimeoTakeHome-iOSUITests */,
+				D90FCB9D2412E17700A04738 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D90FCB9D2412E17700A04738 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D90FCB9C2412E17700A04738 /* MimeoTakeHome-iOS.app */,
+				D90FCBB22412E17900A04738 /* MimeoTakeHome-iOSTests.xctest */,
+				D90FCBBD2412E17900A04738 /* MimeoTakeHome-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D90FCB9E2412E17700A04738 /* MimeoTakeHome-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2F8E823324185C99009938AB /* Extensions */,
+				2F8E822E24185566009938AB /* Cell */,
+				D90FCB9F2412E17700A04738 /* AppDelegate.swift */,
+				D90FCBA12412E17700A04738 /* SceneDelegate.swift */,
+				D90FCBA32412E17700A04738 /* ViewController.swift */,
+				D90FCBA52412E17700A04738 /* Main.storyboard */,
+				D90FCBA82412E17900A04738 /* Assets.xcassets */,
+				D90FCC0B2412EBB500A04738 /* Images */,
+				D90FCBAA2412E17900A04738 /* LaunchScreen.storyboard */,
+				D90FCBAD2412E17900A04738 /* Info.plist */,
+			);
+			path = "MimeoTakeHome-iOS";
+			sourceTree = "<group>";
+		};
+		D90FCBB52412E17900A04738 /* MimeoTakeHome-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				D90FCBB62412E17900A04738 /* MimeoTakeHome_iOSTests.swift */,
+				D90FCBB82412E17900A04738 /* Info.plist */,
+			);
+			path = "MimeoTakeHome-iOSTests";
+			sourceTree = "<group>";
+		};
+		D90FCBC02412E17900A04738 /* MimeoTakeHome-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D90FCBC12412E17900A04738 /* MimeoTakeHome_iOSUITests.swift */,
+				D90FCBC32412E17900A04738 /* Info.plist */,
+			);
+			path = "MimeoTakeHome-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D90FCB9B2412E17700A04738 /* MimeoTakeHome-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90FCBC62412E17900A04738 /* Build configuration list for PBXNativeTarget "MimeoTakeHome-iOS" */;
+			buildPhases = (
+				D90FCB982412E17700A04738 /* Sources */,
+				D90FCB992412E17700A04738 /* Frameworks */,
+				D90FCB9A2412E17700A04738 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MimeoTakeHome-iOS";
+			productName = "MimeoTakeHome-iOS";
+			productReference = D90FCB9C2412E17700A04738 /* MimeoTakeHome-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D90FCBB12412E17900A04738 /* MimeoTakeHome-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90FCBC92412E17900A04738 /* Build configuration list for PBXNativeTarget "MimeoTakeHome-iOSTests" */;
+			buildPhases = (
+				D90FCBAE2412E17900A04738 /* Sources */,
+				D90FCBAF2412E17900A04738 /* Frameworks */,
+				D90FCBB02412E17900A04738 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D90FCBB42412E17900A04738 /* PBXTargetDependency */,
+			);
+			name = "MimeoTakeHome-iOSTests";
+			productName = "MimeoTakeHome-iOSTests";
+			productReference = D90FCBB22412E17900A04738 /* MimeoTakeHome-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D90FCBBC2412E17900A04738 /* MimeoTakeHome-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90FCBCC2412E17900A04738 /* Build configuration list for PBXNativeTarget "MimeoTakeHome-iOSUITests" */;
+			buildPhases = (
+				D90FCBB92412E17900A04738 /* Sources */,
+				D90FCBBA2412E17900A04738 /* Frameworks */,
+				D90FCBBB2412E17900A04738 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D90FCBBF2412E17900A04738 /* PBXTargetDependency */,
+			);
+			name = "MimeoTakeHome-iOSUITests";
+			productName = "MimeoTakeHome-iOSUITests";
+			productReference = D90FCBBD2412E17900A04738 /* MimeoTakeHome-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D90FCB942412E17700A04738 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Mimeo;
+				TargetAttributes = {
+					D90FCB9B2412E17700A04738 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					D90FCBB12412E17900A04738 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = D90FCB9B2412E17700A04738;
+					};
+					D90FCBBC2412E17900A04738 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = D90FCB9B2412E17700A04738;
+					};
+				};
+			};
+			buildConfigurationList = D90FCB972412E17700A04738 /* Build configuration list for PBXProject "MimeoTakeHome-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D90FCB932412E17700A04738;
+			productRefGroup = D90FCB9D2412E17700A04738 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D90FCB9B2412E17700A04738 /* MimeoTakeHome-iOS */,
+				D90FCBB12412E17900A04738 /* MimeoTakeHome-iOSTests */,
+				D90FCBBC2412E17900A04738 /* MimeoTakeHome-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D90FCB9A2412E17700A04738 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90FCC0C2412EBB500A04738 /* Images in Resources */,
+				D90FCBAC2412E17900A04738 /* LaunchScreen.storyboard in Resources */,
+				D90FCBA92412E17900A04738 /* Assets.xcassets in Resources */,
+				D90FCBA72412E17700A04738 /* Main.storyboard in Resources */,
+				2F8E823224185585009938AB /* ImageCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90FCBB02412E17900A04738 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90FCBBB2412E17900A04738 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D90FCB982412E17700A04738 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90FCBA42412E17700A04738 /* ViewController.swift in Sources */,
+				2F8E823524185CAC009938AB /* UIImage.swift in Sources */,
+				D90FCBA02412E17700A04738 /* AppDelegate.swift in Sources */,
+				2F8E823124185585009938AB /* ImageCollectionViewCell.swift in Sources */,
+				D90FCBA22412E17700A04738 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90FCBAE2412E17900A04738 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90FCBB72412E17900A04738 /* MimeoTakeHome_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90FCBB92412E17900A04738 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90FCBC22412E17900A04738 /* MimeoTakeHome_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D90FCBB42412E17900A04738 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D90FCB9B2412E17700A04738 /* MimeoTakeHome-iOS */;
+			targetProxy = D90FCBB32412E17900A04738 /* PBXContainerItemProxy */;
+		};
+		D90FCBBF2412E17900A04738 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D90FCB9B2412E17700A04738 /* MimeoTakeHome-iOS */;
+			targetProxy = D90FCBBE2412E17900A04738 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D90FCBA52412E17700A04738 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D90FCBA62412E17700A04738 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D90FCBAA2412E17900A04738 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D90FCBAB2412E17900A04738 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D90FCBC42412E17900A04738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D90FCBC52412E17900A04738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D90FCBC72412E17900A04738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "MimeoTakeHome-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mimeo.candidate.MimeoTakeHome-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D90FCBC82412E17900A04738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "MimeoTakeHome-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mimeo.candidate.MimeoTakeHome-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D90FCBCA2412E17900A04738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "MimeoTakeHome-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mimeo.candidate.MimeoTakeHome-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MimeoTakeHome-iOS.app/MimeoTakeHome-iOS";
+			};
+			name = Debug;
+		};
+		D90FCBCB2412E17900A04738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "MimeoTakeHome-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mimeo.candidate.MimeoTakeHome-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MimeoTakeHome-iOS.app/MimeoTakeHome-iOS";
+			};
+			name = Release;
+		};
+		D90FCBCD2412E17900A04738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "MimeoTakeHome-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mimeo.candidate.MimeoTakeHome-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MimeoTakeHome-iOS";
+			};
+			name = Debug;
+		};
+		D90FCBCE2412E17900A04738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "MimeoTakeHome-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mimeo.candidate.MimeoTakeHome-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MimeoTakeHome-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D90FCB972412E17700A04738 /* Build configuration list for PBXProject "MimeoTakeHome-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90FCBC42412E17900A04738 /* Debug */,
+				D90FCBC52412E17900A04738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D90FCBC62412E17900A04738 /* Build configuration list for PBXNativeTarget "MimeoTakeHome-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90FCBC72412E17900A04738 /* Debug */,
+				D90FCBC82412E17900A04738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D90FCBC92412E17900A04738 /* Build configuration list for PBXNativeTarget "MimeoTakeHome-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90FCBCA2412E17900A04738 /* Debug */,
+				D90FCBCB2412E17900A04738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D90FCBCC2412E17900A04738 /* Build configuration list for PBXNativeTarget "MimeoTakeHome-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90FCBCD2412E17900A04738 /* Debug */,
+				D90FCBCE2412E17900A04738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D90FCB942412E17700A04738 /* Project object */;
+}
