@@ -42,11 +42,104 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="JSg-86-fzr" id="oRM-jd-gFD"/>
+                        <segue destination="Urq-kw-2Ba" kind="show" identifier="showEditView" id="exr-Ba-alT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="96"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="qX5-np-ITw">
+            <objects>
+                <viewController id="Urq-kw-2Ba" customClass="EditViewController" customModule="MimeoTakeHome_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ECM-u4-ONB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HKa-0P-fLk">
+                                <rect key="frame" x="10" y="10" width="394" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="fzh-kg-Rn9"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UDe-QL-yTg">
+                                <rect key="frame" x="20" y="678" width="374" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbL-dK-Ph5">
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="80"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Counterclockwise">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onCounterClockwiseWithSender:" destination="Urq-kw-2Ba" eventType="touchUpInside" id="9mu-O0-YeB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXw-ww-vpy">
+                                        <rect key="frame" x="183" y="0.0" width="98.5" height="80"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="Clockwise">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClockwiseWithSender:" destination="Urq-kw-2Ba" eventType="touchUpInside" id="Sqd-cj-fw5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFZ-ON-C3H">
+                                        <rect key="frame" x="291.5" y="0.0" width="82.5" height="80"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="Original">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onOriginalWithSender:" destination="Urq-kw-2Ba" eventType="touchUpInside" id="fzz-0f-2uW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="mSK-lo-Sgt"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dV-KD-FK9">
+                                <rect key="frame" x="20" y="768" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Y4a-wC-EjC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onShareWithSender:" destination="Urq-kw-2Ba" eventType="touchUpInside" id="TXF-j5-q5M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8dV-KD-FK9" firstAttribute="leading" secondItem="wbL-3C-WFE" secondAttribute="leading" constant="20" id="Er5-OL-qut"/>
+                            <constraint firstItem="wbL-3C-WFE" firstAttribute="trailing" secondItem="8dV-KD-FK9" secondAttribute="trailing" constant="20" id="FnB-yl-kJ2"/>
+                            <constraint firstItem="HKa-0P-fLk" firstAttribute="top" secondItem="wbL-3C-WFE" secondAttribute="top" constant="10" id="TR7-PZ-7bx"/>
+                            <constraint firstItem="8dV-KD-FK9" firstAttribute="top" secondItem="UDe-QL-yTg" secondAttribute="bottom" constant="10" id="Z4m-Ej-gze"/>
+                            <constraint firstItem="wbL-3C-WFE" firstAttribute="trailing" secondItem="UDe-QL-yTg" secondAttribute="trailing" constant="20" id="ZKA-5e-geu"/>
+                            <constraint firstItem="8dV-KD-FK9" firstAttribute="bottom" secondItem="wbL-3C-WFE" secondAttribute="bottom" constant="10" id="aTF-GP-fQn"/>
+                            <constraint firstItem="HKa-0P-fLk" firstAttribute="leading" secondItem="wbL-3C-WFE" secondAttribute="leading" constant="10" id="eL1-34-iIB"/>
+                            <constraint firstItem="wbL-3C-WFE" firstAttribute="trailing" secondItem="HKa-0P-fLk" secondAttribute="trailing" constant="10" id="iIC-Kp-lCe"/>
+                            <constraint firstItem="UDe-QL-yTg" firstAttribute="leading" secondItem="wbL-3C-WFE" secondAttribute="leading" constant="20" id="vZt-FU-Agd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wbL-3C-WFE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YIg-Zx-Sb0"/>
+                    <connections>
+                        <outlet property="imageView" destination="HKa-0P-fLk" id="Mno-LM-QjU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xs7-BI-DCa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="96"/>
         </scene>
     </scenes>
 </document>

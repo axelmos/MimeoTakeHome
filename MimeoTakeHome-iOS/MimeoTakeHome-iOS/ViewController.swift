@@ -34,6 +34,15 @@ class ViewController: UIViewController {
         
         collectionView.register(UINib.init(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ImageCollectionViewCell")
 	}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showEditView"{
+            let detailVC = segue.destination as! EditViewController
+            let indexPath = sender as! IndexPath
+            detailVC.imagePath = arrImages[indexPath.row]
+        }
+    }
 }
 
 // MARK: UICollectionViewDelegate
@@ -58,8 +67,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "showEditView", sender: indexPath)
+        }
     }
 }
 
